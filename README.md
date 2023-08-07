@@ -1,6 +1,6 @@
 # VM-RISKXVII: An RV32I-based virtual machine
 
-This repository contains the source code for VM-RISKXVII. Its ISA is a reduced version of RV32I, comprising 33 instructions (which can be found in `stdvmop.h`). This project was made for an assignment in COMP2017 (Systems Programming) at The University of Sydney. For enquiries, contact dan.kynguyen2@outlook.com.
+This repository contains the source code for VM-RISKXVII. Its ISA is a reduced version of RV32I, comprising 33 instructions (which can be found in `stdvmop.h`). For enquiries, contact dan.kynguyen2@outlook.com.
 
 A Makefile has been provided for compiling and executing programs. To compile the VM, enter (from the root directory):
 
