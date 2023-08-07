@@ -1,0 +1,8 @@
+n=Supply at most n non-zero integers.
+Enter 0 to halt early.
+Your list:
+[1,3,5,4,2]
+Loads remaining: 15
+Load more elements? [Y/n]: Your list:
+[1,3,5,4,2]
+CPU Halt Requested

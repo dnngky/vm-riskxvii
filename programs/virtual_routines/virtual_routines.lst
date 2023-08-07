@@ -1,0 +1,78 @@
+
+virtual_routines/virtual_routines:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	7ff00113          	li	sp,2047
+   4:	034000ef          	jal	ra,38 <main>
+   8:	000017b7          	lui	a5,0x1
+   c:	80078623          	sb	zero,-2036(a5) # 80c <ADDR_END+0xc>
+
+00000010 <writes>:
+  10:	00054783          	lbu	a5,0(a0)
+  14:	02078063          	beqz	a5,34 <writes+0x24>
+  18:	00050713          	mv	a4,a0
+  1c:	00150513          	addi	a0,a0,1
+  20:	41402783          	lw	a5,1044(zero) # 414 <ConsoleWriteChar>
+  24:	00072703          	lw	a4,0(a4)
+  28:	00e7a023          	sw	a4,0(a5)
+  2c:	00054783          	lbu	a5,0(a0)
+  30:	fe0794e3          	bnez	a5,18 <writes+0x8>
+  34:	00008067          	ret
+
+00000038 <main>:
+  38:	ff010113          	addi	sp,sp,-16
+  3c:	00112623          	sw	ra,12(sp)
+  40:	00812423          	sw	s0,8(sp)
+  44:	00912223          	sw	s1,4(sp)
+  48:	01212023          	sw	s2,0(sp)
+  4c:	10c00513          	li	a0,268
+  50:	fc1ff0ef          	jal	ra,10 <writes>
+  54:	00001437          	lui	s0,0x1
+  58:	81240493          	addi	s1,s0,-2030 # 812 <ADDR_END+0x12>
+  5c:	00048483          	lb	s1,0(s1)
+  60:	0ff4f493          	zext.b	s1,s1
+  64:	12800513          	li	a0,296
+  68:	fa9ff0ef          	jal	ra,10 <writes>
+  6c:	81640413          	addi	s0,s0,-2026
+  70:	00042403          	lw	s0,0(s0)
+  74:	14800513          	li	a0,328
+  78:	f99ff0ef          	jal	ra,10 <writes>
+  7c:	41402783          	lw	a5,1044(zero) # 414 <ConsoleWriteChar>
+  80:	0097a023          	sw	s1,0(a5)
+  84:	41402783          	lw	a5,1044(zero) # 414 <ConsoleWriteChar>
+  88:	00a00493          	li	s1,10
+  8c:	0097a023          	sw	s1,0(a5)
+  90:	16400513          	li	a0,356
+  94:	f7dff0ef          	jal	ra,10 <writes>
+  98:	41002783          	lw	a5,1040(zero) # 410 <ConsoleWriteInt>
+  9c:	0087a023          	sw	s0,0(a5)
+  a0:	41402783          	lw	a5,1044(zero) # 414 <ConsoleWriteChar>
+  a4:	0097a023          	sw	s1,0(a5)
+  a8:	18400513          	li	a0,388
+  ac:	f65ff0ef          	jal	ra,10 <writes>
+  b0:	40c02783          	lw	a5,1036(zero) # 40c <ConsoleWriteUInt>
+  b4:	0087a023          	sw	s0,0(a5)
+  b8:	41402783          	lw	a5,1044(zero) # 414 <ConsoleWriteChar>
+  bc:	0097a023          	sw	s1,0(a5)
+  c0:	1a800513          	li	a0,424
+  c4:	f4dff0ef          	jal	ra,10 <writes>
+  c8:	40802783          	lw	a5,1032(zero) # 408 <DumpPC>
+  cc:	0007a023          	sw	zero,0(a5)
+  d0:	1b400513          	li	a0,436
+  d4:	f3dff0ef          	jal	ra,10 <writes>
+  d8:	40402783          	lw	a5,1028(zero) # 404 <DumpReg>
+  dc:	0007a023          	sw	zero,0(a5)
+  e0:	1cc00513          	li	a0,460
+  e4:	f2dff0ef          	jal	ra,10 <writes>
+  e8:	40002783          	lw	a5,1024(zero) # 400 <DumpMem>
+  ec:	0007a023          	sw	zero,0(a5)
+  f0:	00000513          	li	a0,0
+  f4:	00c12083          	lw	ra,12(sp)
+  f8:	00812403          	lw	s0,8(sp)
+  fc:	00412483          	lw	s1,4(sp)
+ 100:	00012903          	lw	s2,0(sp)
+ 104:	01010113          	addi	sp,sp,16
+ 108:	00008067          	ret

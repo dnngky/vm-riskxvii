@@ -1,0 +1,43 @@
+
+turing_test/turing_test:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	7ff00113          	li	sp,2047
+   4:	05c000ef          	jal	ra,60 <main>
+   8:	000017b7          	lui	a5,0x1
+   c:	80078623          	sb	zero,-2036(a5) # 80c <ADDR_END+0xc>
+
+00000010 <writes>:
+  10:	fe010113          	addi	sp,sp,-32
+  14:	00812e23          	sw	s0,28(sp)
+  18:	02010413          	addi	s0,sp,32
+  1c:	fea42623          	sw	a0,-20(s0)
+  20:	0200006f          	j	40 <writes+0x30>
+  24:	fec42783          	lw	a5,-20(s0)
+  28:	00178713          	addi	a4,a5,1
+  2c:	fee42623          	sw	a4,-20(s0)
+  30:	0007a703          	lw	a4,0(a5)
+  34:	000017b7          	lui	a5,0x1
+  38:	80078793          	addi	a5,a5,-2048 # 800 <ADDR_END>
+  3c:	00e7a023          	sw	a4,0(a5)
+  40:	fec42783          	lw	a5,-20(s0)
+  44:	0007c783          	lbu	a5,0(a5)
+  48:	fc079ee3          	bnez	a5,24 <writes+0x14>
+  4c:	00000013          	nop
+  50:	00000013          	nop
+  54:	01c12403          	lw	s0,28(sp)
+  58:	02010113          	addi	sp,sp,32
+  5c:	00008067          	ret
+
+00000060 <main>:
+  60:	ff010113          	addi	sp,sp,-16
+  64:	00112623          	sw	ra,12(sp)
+  68:	40000513          	li	a0,1024
+  6c:	fa5ff0ef          	jal	ra,10 <writes>
+  70:	00000513          	li	a0,0
+  74:	00c12083          	lw	ra,12(sp)
+  78:	01010113          	addi	sp,sp,16
+  7c:	00008067          	ret

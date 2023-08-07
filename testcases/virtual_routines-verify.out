@@ -1,0 +1,40 @@
+Console Read Character: Console Read Signed Integer: Console Write Character: C
+Console Write Signed Integer: 2017
+Console Write Unsigned Integer: 0x7e1
+Dump PC: 0xcc
+Dump Register Banks:
+PC = 0x000000dc;
+R[0] = 0x00000000;
+R[1] = 0x000000d8;
+R[2] = 0x000007ef;
+R[3] = 0x00000000;
+R[4] = 0x00000000;
+R[5] = 0x00000000;
+R[6] = 0x00000000;
+R[7] = 0x00000000;
+R[8] = 0x000007e1;
+R[9] = 0x0000000a;
+R[10] = 0x000001c9;
+R[11] = 0x00000000;
+R[12] = 0x00000000;
+R[13] = 0x00000000;
+R[14] = 0x0000000a;
+R[15] = 0x00000824;
+R[16] = 0x00000000;
+R[17] = 0x00000000;
+R[18] = 0x00000000;
+R[19] = 0x00000000;
+R[20] = 0x00000000;
+R[21] = 0x00000000;
+R[22] = 0x00000000;
+R[23] = 0x00000000;
+R[24] = 0x00000000;
+R[25] = 0x00000000;
+R[26] = 0x00000000;
+R[27] = 0x00000000;
+R[28] = 0x00000000;
+R[29] = 0x00000000;
+R[30] = 0x00000000;
+R[31] = 0x00000000;
+Dump Memory Word: 0x7ff00113
+CPU Halt Requested
